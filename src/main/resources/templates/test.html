@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http:/ /www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Test page</title>
+        <link rel="stylesheet" href="/main.css" />
+    </head>
+
+    <body>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Source Link</th>
+                </tr>
+                <tr th:each="event : ${events}">
+                    <td th:text=${event.name}>name</td>
+                    <td th:text=${event.date}>date</td>
+                    <td th:text=${event.sourceUrl}>sourceUrl</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
